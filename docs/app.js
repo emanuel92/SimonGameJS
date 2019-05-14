@@ -8,6 +8,7 @@ let sequenceId;
 let win
 let on = false;
 
+const turnCounter = document.querySelector("#gameState");
 const redButton = document.querySelector("#redBtn");
 const blueButton = document.querySelector("#blueBtn");
 const greenButton = document.querySelector("#greenBtn");
@@ -22,11 +23,14 @@ startButton.addEventListener('click', (event) => {
 
 function play() {
     win = false;
+    startButton.disabled = true;
+    startButton.style.backgroundColor = "black";
     sequence = [];
     playerSequence = [];
     command = 0;
     playerTurn = 1;
     sequenceId = 0;
+    turnCounter.innerHTML = "Replay Pattern";
     state = true;
     for (var i = 0; i < 20; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
@@ -142,6 +146,9 @@ function check() {
     if (state == false) {
         commandColor();    
         on = false;
+        turnCounter.innerHTML = "Congrats you did " + playerTurn + " turns!";
+        startButton.disabled = false;
+        startButton.style.backgroundColor = "white";    
     }
 
     if (playerTurn == playerSequence.length && state && !win) {
@@ -155,6 +162,9 @@ function check() {
 
 function winGame() {
     commandColor();
+    turnCounter.innerHTML = "You Won!";
     on = false;
     win = true;
+    startButton.disabled = false;
+    startButton.style.backgroundColor = "white";
 }
