@@ -9,6 +9,7 @@ body {
     color: white;
     font-size: 1.5em;
     text-align: center;
+    margin-top: 25px;
 }
 
 #redBtn, #blueBtn, #greenBtn, #yellowBtn {
@@ -62,4 +63,18 @@ body {
     color: black;
     font-size: 1.5em;
 
+}
+
+#startBtn:active {
+    background: black;
+    color: white;
+}
+
+#count {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    background-color: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15px;
 }
