@@ -13,6 +13,7 @@ self.addEventListener('install', (event) => {
                 'webcomponents/simon.js',
                 'icons/icon512.png',
                 'icons/icon16.png',
+                'favicon.ico',
             ]))
     );
 });
