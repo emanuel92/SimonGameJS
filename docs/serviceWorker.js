@@ -3,7 +3,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(swCache)
             .then(cache => cache.addAll([
-                '/simonJS/',
+                '/SimonGameJS/',
                 'index.html',
                 'app.js',
                 'manifest.webmanifest',
