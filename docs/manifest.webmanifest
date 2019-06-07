@@ -3,7 +3,7 @@
     "short_name": "simonGame",
     "display": "standalone",
     "scope": "/SimonGameJS/",
-    "start_url": "/SimonGameJS/",
+    "start_url": "/./",
     "orientation": "portrait",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",

@@ -27,10 +27,9 @@
         Element.createdCallback = function() {
             shadowRoot = this.createShadowRoot();
             var clone = thatDoc.importNode(template.content, true);
-            shadowRoot.appendChild(clone);
-            
-    }
-    thatDoc.registerElement('simon-game', {prototype:Element});
-})()
+            shadowRoot.appendChild(clone);  
+        }
+        thatDoc.registerElement('simon-game', {prototype:Element});
+    })()
 </script>
 
